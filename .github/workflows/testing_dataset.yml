@@ -26,11 +26,11 @@ jobs:
     # Install skada
     - name: Checking Out Repository  # yamllint disable-line rule:indentation
       uses: actions/checkout@v4
-    # Install Python & Packages
-    - uses: actions/setup-python@v5
+    - name: install conda
+      uses: conda-incubator/setup-miniconda@v3
       with:
+        auto-update-conda: true
         python-version: ${{ matrix.python-version }}
-        cache: 'pip'  # caching pip dependencies
     - run: which python
     - name: Install 'skada' package
       run: |
