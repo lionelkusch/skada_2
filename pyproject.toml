@@ -46,7 +46,7 @@ dependencies = [
 subspace = ["torch"]
 
 deep = [
-    "torch",
+    "torch<=2.5",
     "torchvision",
     "skorch",
 ]
