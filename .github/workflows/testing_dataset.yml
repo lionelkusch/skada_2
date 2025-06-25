@@ -34,6 +34,7 @@ jobs:
     - run: which python
     - name: Install 'skada' package
       run: |
+        conda install pytorch pytorch-cuda -c pytorch
         python -m pip install --upgrade --progress-bar off pip
         python -m pip install -e .[deep,test]
     # Run Tests
