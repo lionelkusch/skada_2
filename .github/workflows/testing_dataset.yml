@@ -34,7 +34,7 @@ jobs:
     - run: which python
     - name: Install 'skada' package
       run: |
-        conda install pytorch torchvision skorch
+        conda install pytorch torchvision skorch -c conda-forge -c pytorch
         python -m pip install -e .[test]
     # Run Tests
     - name: Run Tests without torch
